@@ -10,7 +10,7 @@ GIT HUB - ONE Common Latest Code - Merges the code by each person
 
 Merge conflict - when same person push same code 
 
-----------------------Create Repo in Git------
+----------------------Create Repo in Git------ Pushing new code from local to Remote
 Create a Repo
 Go commandprompt >
 
@@ -38,7 +38,7 @@ step 2 : Go the folder where project code there,
 	
 	
 	
---------------clone a fresh repo for first time to local ------
+--------------cloning a fresh code for first time from remote to local and push back again with updates  ------
 
 Step 1 :  
 		cd .. in cmd to remove the path if there ia any code 
@@ -51,4 +51,10 @@ Step 2:	updated file to stage and commit in local
 		>> git commit -m "message"
 		pushing files to Remote repo
 		>> git push origin master
-		
+
+------------- cloning remote to local with updates on exixting project cloned before------	lastest changes 
+	
+Step 1 : cd..
+		 cd existing file path
+		 git pull origin master
+		 
