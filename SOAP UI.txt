@@ -1,0 +1,70 @@
+SOAP UI 
+
+SOAP UI supports 
+Soap Service | REST Service projects
+
+
+How to Create Saop Project, Test suite, Test cases in SOAP UI
+-------------------------------------------------------------
+Need : WSDL - Web Service Description Language (link or xml format file)
+
+http://www.dneonline.com/calculator.asmx?wsdl
+
+Wizdler - EXtenstion to extract webservices from the XMl page of wsdl
+
+ 
+SOAP Service - Request & Response in XML format
+
+
+1) Create SAOP Project using WSDL 
+ Note : Multiple version avaible in project - detele others i.e(Wizdle)
+		Add Wizdler to chrome
+		
+2) Create Test Suite & Test Cases
+		Right click on wizdle , Generate Test suite
+		Now Test suite created with multiple test cases
+		
+3) Added contains assertion(validation) to test cases
+		Open test case -> Test step -> Assertion button avail at bottom 
+		run After adding validation - assertion , test steps indicates green or red flag to show results
+		Update assertions by right click - configure 
+		assertion - GREEN - validation Pass
+		assertion - RED   - validation Fail
+		
+4) Execute tests in sequence & parallel 
+		1. Sequence execution 
+			- double click on test suit and RUN 
+		2.Parallel execution 
+			- select parallel icon and then RUN 
+			
+5) Documentation	
+		1. Right click on Wizdle - Generate documwnt - give folder path 
+
+
+How to Create Rest Project, Test suite, Test cases in SOAP UI
+-------------------------------------------------------------
+https://restcountries.eu/
+https://restcountries.eu/rest/v2/name/india  --> url 
+https://restcountries.eu/ ------------> End point 
+					 .eu .com .edu ---> domain 
+		/rest/v2/name/india ----------> Resource		
+
+
+POST     ---							(Create)
+GET			|	Requests in REST API 	(Select)
+PUT			|							(Update)
+DELETE   ---
+
+
+https://restcountries.com/v3.1/name/india   ----> URI
+
+WSDL - Web Application Description Language
+
+1. Create a REST project 
+		--> provide uri 
+		--> run the request and get JSON format as Response
+2. Create test suite & test case (request)
+3. Add Assertion
+4) Execute tests in sequence & parallel 
+5) Documentation	
+		

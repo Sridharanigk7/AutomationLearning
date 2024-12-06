@@ -1,0 +1,147 @@
+CUCUMBER BDD 
+
+BDD 	- Behaviour  Driven Development - Development approach - tech/non tech
+Cucumber - Environment supports BDD format
+
+Gherkin -   business , Dev , QA - Readable language using syntax 
+
+Keywords used in cucumber 
+Scenario 
+Feature - Multiple sceanrios (+ve & -ve)
+Feature file - .feature extension 
+Scenario outline 
+Step Definition
+
+Scenario : Make Minimum due payment
+	Given user is on pay credit card page	(pre-conditions)
+	When user fill details and select minimum amount	(user actions)
+	And Click on Pay button (next do this)
+	Then Credit card confirmation page is displayed		(+ve expected output)
+	But error not displayed 	(-ve validation )
+--------------------------------------------------------------------------------
+ 
+Step 1 : Setup Java in PC
+ 
+ Download Jdk - latest support version
+ Add - Java file path in environmental variables
+		Java bin - path in environmental variables
+This helps in referring latest java in pc for all platforms
+
+
+Step 2 : Eclipse download 
+
+Eclipse IDE for java developers
+
+Step 3 : Instal cucumber plugin from Eclipse market place >> help
+			testng pluigin
+			
+step 4 : Create a java project using maven structure 
+
+ ------------------------------------------------------------------------------------
+ 
+ Feature File
+ Step definition 
+ Test Runner   ---------> JUnit & TestNG - Java 
+ 
+ -----------------------------------------------------------------------------------
+ 
+ mvnrepository.com ---> all java files available
+ 
+ ---------------------------------------------------------------------------------
+ Step 1 : Create a Maven project 
+ Step 2: In pom.xml file add "cucumber-JVM" java dependancy to download all cucumber jars from mvn website
+ Step 3: In pom.xml file add "cucumber-TestNG"  dependancy to download all cucumber jars from mvn website
+ step 4: Create a package under src/test/java 
+			Fetures ----> package
+			File-----> .feature file
+step 5 : Create a package under src/test/java 
+			cucumberoptions ----> package
+			TestNGRunner-----> class file 
+		1) Add cucumberoption annotations and import them 
+			@CucumberOptions(features="src/java/features",glue="stepDefinitions",monochrome= true)
+			
+----------------------------------------------------------------------------
+
+code reusablilty in cucumber - we can use stepdefinition reused 
+eg : login with different string i.e, admin and user has different credentials but same way to proceed
+
+--------------------------------------------------------------------------------
+Scenario outline : parameterizing scenarios
+
+when user login with "<username>" and password "<password>"
+
+Examples:
+	|username|password|
+	|Debituser|hello988|
+	|credituser|hello987|
+	
+	
+------------------------------------------------------------------------------------
+
+normally it accept string in methods <string> in step defintion
+eg : @when ("when user into application with {string}")
+
+if we want to sent anyu data type integer or float or any
+Regex pattern   ^(.+)$
+ @when ("^when user into application with (.+)$")
+ 
+ ------------------------------------------------------------------------
+ 
+List
+use in scenarios directly 
+||
+||
+||
+||
+
+in stepdefinition public void methodname(List <String>data )
+system.out.println(data.get(0));
+system.out.println(data.get(1));
+system.out.println(data.get(2));
+system.out.println(data.get(3));
+------------------------------------------------------------------------               
+Tags
+
+runner file add 
+tags="@smoketest" along with operators used for multiple tags to add
+------------------------------------------------------------------------               
+
+Background 
+
+pre-requisite steps - launch url can be added as background 
+using Background:
+
+------------------------------------------------------------------------               
+
+
+if we use in scenario 
+Given 
+when 
+And 
+ In step definition And is follower of when so that is consider as when StpDef
+ 
+ ------------------------------------------------------------------------
+ 
+ Hooks is java class added inside stepdefinition
+ 
+ Hooks --- annotations are @Before @After
+ 
+ Hooks (@before) is the first execution before start running feature file 
+ Background is the first execution before start running each scenario in feature file 
+ 
+ Hooks can be defined for specific tags also by using 
+ @Before ("@NetBanking")
+ @Before ("@Mortgage")
+ 
+After in Hooks is called Tear down method in stpdef
+ 
+--------------------------------------------------------------------------------
+Reprting files 
+ plugin= {"pretty", "html:target/cucumber.html", "json:target/cucumber.json"}
+ Refresh project each run to view reports 
+ 
+-----------------------------------------------------------------
+dryRun = true 
+it will just compile all are present and revert mismatch tests 
+iumage 100 of test 
+after 50 test case - when you dont want to stuck the run we use dryRun = true

@@ -1,0 +1,23 @@
+SOAPUI - Properties
+can be added in various level
+
+1. Project level	-  Double click add property name and value		${#project#propertyname}
+2. Test suite		-  Double click add property name and value		${#TestSuite#propertyname} 
+3. Test Case		-  Double click add property name and value 	${#TestCase#propertyname}
+4. Test Step 		-  right click, add test step- then property add					${TestStepName#propertyname}
+
+Then add groovy Script to run them using ,
+ method -> context.expand ('${#project#propertyname}')
+
+to print use,
+
+log.info context.expand ('${#project#propertyname}')
+
+
+
+Property Transfer - add 2 test steps then  add property 
+
+Request 1 ----> Response 2|
+						  |
+						  |
+						  Request 2 ---->Response 3

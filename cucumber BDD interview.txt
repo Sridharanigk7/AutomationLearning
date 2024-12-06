@@ -1,0 +1,37 @@
+Exceptions you get in cucumber 
+
+Undefined steps 
+
+Working nature of cucumber 
+
+Feature 	---> Desccribe our requirement
+stepdefiniton ---> Mapping logic with syntax from console
+runner file ---->  Trigger file to navigate the path where to find 
+
+what class to extend TestNG file to compactable with cucumber ? AbstractTestNGCucumberTests
+
+Scenario outline : parameterizing scenarios
+Regex pattern   ^(.+)$
+
+tags are used to run set of scenarios eg: smoke test 
+@tagname
+runner tags="@SmokeTest"
+Opertors can be used in tags using and or not 
+
+
+ in step definition And is follower of when so that is consider as WHEN StpDef
+ 
+ what is cucumber hooks (@Before & @After)
+ 
+ Hooks have more advantages than Background
+ Background runs only inside each feature file 
+ But Hooks run allover before the feature file starts 
+ i.e, Before __> Background __>Scenario___> After => thius how execution starts 
+ 
+  Hooks (@before) is the first execution before start running feature file 
+ Background is the first execution before start running each scenario in feature file 
+ 
+ Paretial code is in prequisite is different and partial code is common --> here i introduce Hooks and Background 
+						Before __> Background __>Scenario___> After
+						
+						

@@ -1,0 +1,127 @@
+To Create Maven Project with Selenium & Cucumber dependencies
+
+
+Step1:
+		In Eclipse, 
+		Right click > New > Maven Project > Next > Filter > search for"quickstart" >>select 'articfactid as Maven-archtype-quickstart' >next > Groupid as anyname and Artifactid as frameworkname
+		Project created 
+Step2:
+		Open pom.xml
+		Delete the Junit Dependencies without deleting parent tag i.e, <dependencies> </dependencies>
+		add > Cucumber jvm java + cucumber jvm testNG + Selenium java(mvnrepo website)
+		
+Step3:
+		Delete App test java file from src/test/java
+		Create a package under src/test/java to create features 
+		New > package > features
+
+Step4:
+		In feature, create a new file with .feature extension
+		Ensure cucumber plugin is there in eclipse market place
+
+Step5:
+		Create a package for stepDefiniton and create a java class file inside
+
+Step 6:
+		Create a package for cucumberoptions and create a java class file inside for test runner
+			
+			
+what is artifact id ---> provide skeleton for basic java project
+
+
+-------------------------------------------------------------
+
+To use chrome 
+
+Sytem.setproperty("webdriver.chrome.driver","path where chrome ext downloaded");
+
+Webdriver driver = new Chromedriver();
+driver.get(url)
+
+
+------------------------------------------ 8 Locators----------Prefrences
+Action to perform is CLICK or PASS VALUE
+
+"By" is  class - locators are available with staticx methods
+
+
+========id Locator=====
+1. id = string name (Action sendkeys)  *****  1
+driver.findElement(By.id("string name"));
+this findelement returning WebElement so storing with a variable as
+WebElement Username = driver.findElement(By.id("string name")); ----> WebElement is  a interface
+driver.SendKeys("sri@yahoo.com");
+
+Action(click)
+WebElement nextbtn = driver.findElement(By.id("string name"));
+nextbtn.click();
+or 
+driver.findElement(By.id("string name")).SendKeys("sri@yahoo.com");
+driver.findElement(By.id("string name")).click();
+
+what is the return type of driver.find element is WebElement
+Advantage of creating WebElement is you can use anywhere if not you have write code again 
+
+Thread.sleep(2000);     ---> 2000 milliseconds static wait 
+
+========name Locator=====    
+
+driver.findElement(By.name("name")).SendKeys("sri@yahoo.com");    *****  1
+driver.findElement(By.name(" name")).click();
+
+========xpath Locator=====  
+                                                                        
+xpath is extended html path /address of specific element		 *****  2
+inspect > copy > copyxpath = //*[@id="login-username"]  here replace * with html tag name and "" to '' 
+
+driver.findElement(By.xpath("//input[@id='login-username']").SendKeys("sri@yahoo.com");
+
+========css selector Locator=====
+
+inspect > copy > copyselector= #login-username  				 *****  2
+driver.findElement(By.cssSelector("#login-username")).SendKeys("sri@yahoo.com");
+
+========LinkText Locator===== only for links                  *****  3
+
+driver.findElement(By.linkText("Difficulty siging in ?")).click();
+
+========partialLinkText Locator===== for long links but NOT Recommented     *****  5
+
+driver.findElement(By.linkText("Difficulty")).click();
+
+========class name Locator===== not unique   *****  4
+
+driver.findElement(By.classname(" phone-no")).SendKeys("sri@yahoo.com");
+
+-------------------------------------------------------------------------------------------
+
+									SYNCRONISATION - Selenium doesnot have default waits 
+
+Implicit wait and Explicit wait ? or syncronization ? are same
+
+page load timeout - particular page to load 
+driver.manage().timeout().pageLoadTimeout(20,Timeunits.SECONDS);
+
+Implicit wait - global webElement can use this wait 
+driver.manage().timeout().implicitlywait(20,Timeunits.SECONDS);
+ 
+ 
+Explicit wait - Webdriver wait has no methods straight 
+
+Create a method to send values or to click till the element visibility,
+
+public static void sendkeys(Webdriver driver, WebElement element, int timeout, String value) {
+	new Webdriver(driver, timeout).
+	until(ExpectedConditions.visibilityOf(element));
+	element.sendkeys();
+}
+
+to call this method,
+
+WebElement nextbtn = driver.findElement(By.id("string name")); 
+
+sendkeys(driver, nextbtn, 10, "Tom" );
+
+------------------------------------------------------------------------------
+Window handles 
+Asesert.assertEquals

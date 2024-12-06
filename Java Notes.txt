@@ -1,0 +1,172 @@
+=======================================================================================
+How to Create object for a class?
+ClassName classObject = new ClassName();    ---> to create a object
+ClassObject.Methodname  -----------> to call the particular method inside the class
+
+---------------------------------------------------------------------------------------
+
+To create a main classs inside a class
+public class{
+
+
+public static void main(String[] args)
+{
+
+}
+
+
+}
+
+----------------------------------------------------------------------------------------
+
+To create a method 
+
+public void methodname() {
+
+}
+
+------------------------------------------------------------------------------------------
+
+FYI - methods are not allowed inside main block but inside a class body
+
+public class{
+
+public void ()
+
+public static void main(String[] args)
+{
+
+}
+
+
+}
+
+------------------------------------------------------------------------------------------
+for string class - predefined class has syntax
+String str = "content";
+using old method 
+String str = new String("content");
+String str = "content"; ------> new string is removed as it is predefined class 
+
+Str.chartAt(8)
+Str.indexOf("@")
+Str.substring(6)
+
+-------------------------------------------------Reverse a string-----------------------------
+public static void main (String[] args)
+{
+	String s= "madam";
+	string t= "";
+	
+	for (i=s.length(), i>=0, i--)
+	{
+	t= t+s.charAt(i);
+	}
+	system.out.println(t);
+
+	if (s==t){
+	system.out.println("The given name is palindrome ")
+	}
+
+}
+
+--------------------------------------------Interface-------------------------
+Interface has only methods where body is not there
+Class has body with methods 
+
+public interface interfacename(){
+
+methods /variables
+
+}
+
+
+Class should be implemented interface the methods from interface to class
+
+you have to implemets all the methods from interface where if you mis any 1 method - it error
+
+public class classname implements interfacename ()
+{
+main class -call methods
+}
+
+*************
+to call object from interface,use
+InterfaceClassName classObject = new ClassName();
+
+to call object from specific class than interface again create a object and call
+ClassName classObject = new ClassName();
+*************
+do we have variables in interface?
+yes, but we have to set public as access modifier
+
+can we implement multiple interface 
+yes by adding , and implement methods 
+
+------------------------------------------------------------------------------------------
+
+Interface vs inheritance 
+
+In interface, agreement says that i will implement where no code in parent class
+
+in Inheritance, the main code also there in parent class and that is inherited to other class 
+
+
+IS Multiple interface is allowed in java ? Yes
+
+IS Multiple Inheritance is allowed in java ? No
+
+---------------------------------------------Inheritance---------------------------------------
+
+public class childclass extends parentclass (){
+
+own methods /variables
+
+}
+
+-------------------------------------------------Array-----------------------------------------
+
+A container stores multiple values of same data type
+
+in array, first we haveto create a spcae to store,
+i.e,	int a[]= new int[];
+		
+step 1: Declare an array and allocating memory first
+			
+		int a[]= new int[3]; ---> data type accordingly
+		a[0]=2;
+		a[1]=22;
+		a[2]=32;
+		
+		for (i=0,i<a.length, i++)
+		{
+		system.out.println(a[]);
+		}
+		
+2) int b[] ={1,2,3,4,5}; ---> dynamic memory allocation for this type array
+-----------------------------------------------------------------------------------------------
+													Multidimensional array 
+in array, first we haveto create a spcae to store,
+i.e,	int a[][]= new int[2][3]; 		1 3 4
+										5 6 7
+		a[0][0]=1;				
+		a[0][1]=3;
+		a[0][2]=4;
+		a[1][0]=5;
+		a[1][1]=6;
+		a[1][2]=7;
+		
+		other way is below
+											  |	0 1 2
+											----------
+int b[][]={1,2,3} ,{4,5,6},{6,8,9}};	 	0 |	1 3 4
+											1 |	5 6 7
+											2 |	6 8 9 
+											
+		row ,column [2][3] 1 3 4
+						   5 6 7
+									
+				
+------------------------------------------------------------------------------------------------------		
+		
+

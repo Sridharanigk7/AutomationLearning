@@ -1,0 +1,111 @@
+contains ---------------------------------------|
+NOT Contains									|
+Xpath Match - extract nodes						|XML Response valiadtion 
+XQuerry - extract nodes with conditions			|
+Valid/Invalid HTTP status						|
+Script -----------------------------------------|
+
+
+Script -----------------------------------------|
+JSON Path  match								|  									
+JSON Path Existance match						| JSON Response
+JSON Path match									|
+JSON Path RegEx Match---------------------------|
+
+
+------------------------------------------------------------------------------------------
+Xpath Match 
+
+SOAP Service
+https://ws.footballpool.dataaccess.eu/info.wso?WSDL 
+
+Xpath - compute/get nodes from XML document
+
+W3School
+/bookstore/book[last()]				Selects the last book element that is the child of the bookstore element
+
+/bookstore/book[last()-1]			Selects the last but one book element that is the child of the bookstore element
+
+/bookstore/book[position()<3]		Selects the first two book elements that are children of the bookstore element
+
+/									Selects from the root node
+
+//									Selects nodes in the document from the current node that match the selection no matter where they are
+	
+*									Matches any element node
+
+//book/title | //book/price			Selects all the title AND price elements of all book elements
+
+Xpath assertions - click declare if name spacing is present eg : m:allname
+then select from current and then test
+
+
+how to count tags in xpaTH 
+
+1.Count(//m:snames)
+
+2.match function to compare
+matches(path,"value") returns true or false - alphabets 
+
+3.contains only alphabets
+matches(path,"[A-Za-z]*")     ---> * represent multiple alphabets can present
+
+4.contains only digits
+matches(path,"\d")   		----->  \d represent only digits
+
+------------------------------------------------------------------------------------------
+
+XQuery 
+book[price<30]
+
+Xquery 	- 	doc("xml link")/bookstore/book[price<30]/title
+
+FLWOR Expression 
+F	-	For , Selects a sequence of node
+L	-	Let , Binds a sequenece to a variable
+W	-	Where , filters node
+O	-	Order by , Sorts the mnode
+R	-	Return , what to return from node
+
+Xquery with FLWOR expression
+
+for $x in doc("xml link")/bookstore/book
+where $x/price>30
+order by $x/title
+return title
+
+Xquery in soap ui 
+
+Open tag 
+open function
+Query in between 
+close function
+close tag 
+
+for $x in xpath 
+return <m:tplayerName> {data($x/m:sName)} </m:tplayerName>
+
+------------------------------------------------------------------------------------------
+
+Valid/Invalid HTTP Status codes
+
+Erroe status
+200 - Success 
+300 - Redirection
+400 - Client error
+500 - Server error
+
+------------------------------------------------------------------------------------------
+
+REST API request Asserstions
+
+JSON path Assertion
+
+How to write JSON path ?
+Extension ? JSON path Finder
+
+JSON Path count 			-	to count nodes
+JSON PAth Existance match	-	path is available true/false
+JSON Path match				-	data present is verified
+JSON Path RegEx Match		-	only digit/Alphabets [0-9]* and [A-Za-z]*
+

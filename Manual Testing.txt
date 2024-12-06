@@ -1,0 +1,19 @@
+Software testing  - Relase quality products to customer/finding bugs
+Manual Testing - tools not used
+Automation Testing - performing testing using Tools
+
+Re-testing - Same test excuted multiple times with dif data conditions
+	eg,lgin user name with positive & Negative conditions 
+	challenge : Time consuming & lot of effort
+	
+Regression Testing - 
+	eg, once built relase by dev, tester should test according to requirement in multiple cycles (SDLC)
+	Built 1--10TC  8 passed , 2 failed
+	Built 2 + bug fixes --- bug retest, dependant test case to check existing function is not broken called regression
+	
+
+To overcome Retesting / Regression testing - Automation came 
+
+	
+	
+	
