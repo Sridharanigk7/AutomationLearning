@@ -55,6 +55,16 @@ Step 2:	updated file to stage and commit in local
 ------------- cloning remote to local with updates on exixting project cloned before------	lastest changes 
 	
 Step 1 : cd..
-		 cd existing file path
-		 git pull origin master
+		cd existing file path
+		git pull origin master
 		 
+		you work on the day 
+		 
+		push back code to remote repo 
+		>> git add *
+		>> git status
+		>> git commit -m "message"
+		pushing files to Remote repo
+		>> git push origin master
+		
+---------------------------------------------------------------------------------
