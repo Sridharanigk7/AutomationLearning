@@ -1,0 +1,54 @@
+Git - Version control system
+
+Download Git setup for windowns and install
+
+
+x person write -est timezone    -sent to GIT HUB --Y can take without replacing y's existing code
+Y person write - ist timezone
+
+GIT HUB - ONE Common Latest Code - Merges the code by each person 
+
+Merge conflict - when same person push same code 
+
+----------------------Create Repo in Git------
+Create a Repo
+Go commandprompt >
+
+step 1 : define who you are to git git by using below commands,
+
+		git config --global user.name "Sam Smith"
+		git config --global user.email sam@example.com
+		
+step 2 : Go the folder where project code there,
+		
+		cd foldename in cmd
+		git init --> to say initialise an empty folder
+		
+		staging(commit level 1)   -   commit (commit level 2)
+		
+		if you 100 files, 80 files committed then that will only pushed to repo (commit files pushed to repo)
+	
+	>>> Add files to stagging
+		git add *   ( * means everything )
+		git status 
+		
+	>>>  git commit -m "first commit" 
+	>>>  git remote add origin  link   (connects local and remote repo )
+	>>> git push origin master
+	
+	
+	
+--------------clone a fresh repo for first time to local ------
+
+Step 1 :  
+		cd .. in cmd to remove the path if there ia any code 
+		git clone url in cmd (now code is cloned in local system) 
+		
+Step 2:	updated file to stage and commit in local 
+		>> cd foldename in cmd
+		>> git add *
+		>> git status
+		>> git commit -m "message"
+		pushing files to Remote repo
+		>> git push origin master
+		
