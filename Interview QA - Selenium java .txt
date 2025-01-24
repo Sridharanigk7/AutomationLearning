@@ -1,0 +1,51 @@
+1. Why you choose Selenium ?
+ 
+ Open source tool
+ Supports Multiple platform - windows , os 
+		  Multiple browser - chrome,firefox,safari,internet explorer
+		  Multiple language - java, C++,python, ruby, javascript
+		  
+
+2. What is Selenium webdriver articheture 
+
+					
+				Json format							Communicate
+	Test case ---------------- Browser drivers ---------------------> RespectiveBrowse -----
+							^																|
+							|																|
+				Json format	|																|
+							 ---Browser drivers <--------------------- Actions complete <----
+					
+3. WebDriver driver = new ChromeDriver();
+	
+	//Invoking browser 
+		//Chrome	- ChromeDriver		-	Methods close(),get()
+		//firefox	- FirefoxDriver		-	Methods close(),get()
+		//safari	- SafariDriver		-	Methods close(),get()
+		//WebDriver - Interface with set of all blueprints of all drivers with empty bodies
+		//WebDriver - WebDriver methods +class methods
+		//	ChromeDriver driver = new ChromeDriver();
+		
+		//chromeDriver.exe --executable file helps to invoke browser
+		//step to invoke chrome driver
+		//Sytem.setProperty("Webdriver.chrome.driver","path of downloaded file")
+		//Selenium manager came into picture to automated this above step 
+		
+		WebDriver driver = new ChromeDriver();
+		
+		//Firefox
+
+		System.setProperty("webdriver.gecko.driver", "/Users/rahulshetty/Documents/geckodriver");
+		WebDriver driver1 = new FirefoxDriver();
+
+		//Microsoft Edge
+
+		System.setProperty("webdriver.edge.driver", "/Users/rahulshetty/Documents/msedgedriver");
+		WebDriver driver2 = new EdgeDriver();
+		
+4. Difference between Close nad quit 
+
+		driver.close();   --> will close the initial page invoked by browser (one tab)
+		driver.quit();   ----> will close all associated windows invoked by the broser (multiple tabs)
+		
+5. 

@@ -33,7 +33,7 @@ Step 2 : Eclipse download
 Eclipse IDE for java developers
 
 Step 3 : Instal cucumber plugin from Eclipse market place >> help
-			testng pluigin
+			testng pluiginwaz
 			
 step 4 : Create a java project using maven structure 
 
@@ -145,3 +145,55 @@ dryRun = true
 it will just compile all are present and revert mismatch tests 
 iumage 100 of test 
 after 50 test case - when you dont want to stuck the run we use dryRun = true
+
+---------------------------------------Rules in framework---------------------------
+
+Exception : Nullpointer --> 
+
+Transferring states from one class to another - dependency injection -->cucumber jvm picocontainer
+
+
+Step definition breaks into two file at that time,
+
+step 1 : cucumber jvm picocontainer add this dependancy
+step 2 : create a package with a class file for utlis
+step 3 : add the common varaibels into utlis file
+step 4 : comeback to stpdef1 and add a constructor (constructor is a methoad as same as class name)
+step 5 : that constructor should have parameter as utlis class instance inside
+step 6 : make it global variable 
+
+Single responsibility principle --->> reuse methods in SRp rule
+Loosley coupled -->> by adding dependency injection we are moving methods easily anywhere in other class called loosley coupled class
+
+----------------------------------------------------Page Object Pattern ---------------------------------------------------------
+single file to have all the elements in webpage under java file
+
+Create a pakage for page objects 
+create a class file for each page 
+common action methods and webelements inside them
+
+----------------------------------------------------------
+
+if you want use method in public but not the locators means use private for  locators where no one can touch 
+
+------------------------------------------------------RUN Test Parrallely---------------------------------------
+
+in Test runner file 
+create a method inside AbstractTestNGcucumbertests,
+
+@override
+@DataProviser(parrallel=true)
+public object[] [] scenarios()
+{
+return super.scenarios();
+}
+
+-------------------------------------------------------Reports------------------------------------------------
+
+html, xml, json, junit, extent 
+
+plugin = {"html:target/cucumber.html","json:target/cucumber.json"}
+extend - 3 rd party plugin so need maven dependenciew for this
+
+in mvn repo : extent report dependency (1)
+			  grasshopper>>extentreports cucumber7 adaptor

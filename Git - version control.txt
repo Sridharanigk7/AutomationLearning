@@ -1,5 +1,8 @@
 Git - Version control system
 
+Referrence link : https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html 
+
+
 Download Git setup for windowns and install
 
 
@@ -68,3 +71,35 @@ Step 1 : cd..
 		>> git push origin master
 		
 ---------------------------------------------------------------------------------
+                               Branching 
+							   
+							Master code - origin 
+							     |
+								 |
+								 |Create a new branch by coping master code "develop" name file
+								 |  >> git checkout -b develop in cmd
+								 |
+								 V  
+							Branch  (develop)
+							>> git branch	 (available branches and folders show) 
+							 work on develop for day and push code to develop
+							 
+							>> git add*
+							>> git status
+							>> git commit -m"dsguys"
+							>> git push origin develop (not to master)
+
+
+Switching branch from master to develop
+						>> git checkout develop
+To Create a new branch from master to develop branch					
+						 >> git checkout -b develop
+						 
+						 
+-------------------------------------------Merging branches--------------------------------------
+
+>> git checkout master (switch to actual branch)
+>> git pull origin master
+>> git merge develope (now merge done)
+
+--------------------------------------------------------------------------------------------------

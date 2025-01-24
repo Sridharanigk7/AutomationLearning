@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------------
+Install Java and Set java Home path in system variables
+-------------------------------------------------------------------------------------
+In chrome, Search for jdk download 
+	
+	Select long lastest supported version and download for respective windows
+	Now install the downloaded jdk file
+	Take the home path of the java installed i.e, C:\Program Files\Java\jdk-21
+	
+In Pc, Search edit the system environmental variables
+	
+	click on environment variables 
+	Add the java home path 
+	Click on path to edit and add bin directory path i.e, C:\Program Files\Java\jdk-21\bin
+
+-------------------------------------------------------------------------------------
+Install Eclipse and Create new Maven project with selenium Dependencies
+-------------------------------------------------------------------------------------	
+In chrome, Search for Eclipse download 
+	download packages >> Eclipse IDE for java developers
+	select respective window user 
+	Open eclipse
+	
+	Create java project 
+	mvnrepository for java libraries >> selenium java (copy dependencies)
+	now convert your java project into maven project >> right click >>configure >> convert maven project
+		provide groupid and artificatid
+	update depenency in pom file - selenium java 
+	jars>> build automatically. if jars are not shown
+	
+-------------------------------------------------------------------------------------
+Creation of webdriverobject and its related class
+-------------------------------------------------------------------------------------
+	
+	Create a java class and invoke a browser 
+	
+	WebDriver driver = new ChromeDriver();
+	

@@ -1,0 +1,254 @@
+API Testing  - Backend testing not an UI Testing
+
+Postman		 - Manual Testing Tool
+RestAssured  - Automation Testing Tool
+Soap - Xml format
+postman/rest -  Json format
+-----------------------------------------------------------------
+Client -> Physical computer
+Server -> Web 
+
+
+Architecture -
+1- tier client computer and File server
+2- tier(client computer and database server)
+3- tier(Client computer and business logic tier and database tier)
+
+Presentation layer  -   HTML, JavaScript, CSS 
+Application Layer  - Java, .Net, C#, Python
+Database Layer -  MySQL,Oracle.MongoDB
+
+API - Application Program Interface - Communication btw 2 applications where may diff in platflorms/technologies
+
+Front - end application   ---> Web testing GUI (less effort)
+
+Middle layer (API Layer)  ----> API testing 80% testing happens here
+
+Back-end application -----> Database testing 
+
+Workspace ---> Collections  -----> Number of http request
+
+---------------------------------------
+
+Create a workspace/Rename /Deleting
+ 
+Creating Collection /Rename /Deleting /run 
+	- Collection ncontains no of folder and http request 
+
+request  ---> API  ----> response 
+
+http requests 
+Get - retrieve the resource
+post - Create the resource 
+put - update the resource 
+patch - update partial details of resources 
+delete - delete the resource inside database
+
+Creating requests 
+Sample tc 
+
+Request Type | URI 								 | Request Payload | Response payload	 | status code |
+Get			 |https://reqres.in/api/users?page=2 | 	NA			   | Returns list of user| 200 		   |
+
+--------------------------------------------------------------------------------
+Sample api
+
+https://reqres.in/api/users?page=2 
+
+https://reqres.in/ -----> domain/host
+
+api/users?--------> path parameter
+
+page=2 ------> querry paramater
+--------------------------------------------------------------------------------
+Response validations:
+					
+					Status code 
+					time
+					size of data
+					response body json/xml
+					cookies (if data present)
+					headers
+--------------------------------------------------------------------------------
+
+Request Type | URI 						  | Request Payload 					| Response payload	  | status code |
+POST		 |https://reqres.in/api/users | {"name" : "pavan" ,"job" : "sdet"}  | 		   				| 201 		|
+
+Request payload (body) select raw and json format inside Body ---> in postman
+{
+"name" : "pavan" ,
+"job" : "sdet"
+}
+
+--------------------------------------------------------------------------------
+
+Request Type | URI 					    	  | Request Payload 				     	| Response payload	  | status code |
+PUT		     |https://reqres.in/api/users/411 | {"name" : "pavan" ,"job" : "sdet QA"}   |              		  | 200 		|
+
+Request payload (body) select raw and json format inside Body ---> in postman
+{
+"name" : "pavan" ,
+"job" : "sdet QA"
+}
+passing the Id along with url here 
+--------------------------------------------------------------------------------
+Request Type | URI 					    	  | Request Payload  	| Response payload	  | status code |
+DELETE	     |https://reqres.in/api/users/411 | NA     				|         NA 		  | 204  		|
+
+passing the Id along with url here 
+
+--------------------------------------------------------------------------------
+
+Status code 
+
+3 levels 
+200 --->successfull
+400 --->Unauthorised
+500 --->Server error 
+
+URL reference : https://restfulapi.net/http-status-codes/ 3 level code status flowchart
+
+
+-------------------------------------------------------------------------------------------------
+--------------------DAY 3 ----------------- Creating Own API ------------------------------------
+-------------------------------------------------------------------------------------------------
+Need somesoftware to create own api ->  Node js 
+										 npm - node package manager (comes along with node js)
+										json server
+
+Step 1: Install Node JS (download from web)
+		Add path in environmental variables 
+		Check in cmd using below commands for successful installation
+				node --version
+				npm --version
+				
+Step 2: Install Json -Server(run command on cmd or terminal is enough)
+		Below is the command to install json server
+				npm install -g json-server
+	
+Step 3: To create a API, We need some data , so create a students.json file 
+
+		{
+		
+		CODE BLOCKS 
+		
+		}
+		
+Step 4 : Go to the file location of student.json and give cmd on the location 
+		 Execute a command json-server students.json 
+			output: Resource and host will come as the API is up and running 
+					Resource url is the API Url
+			Note: Dont close the cmd,if closed then API is alos closed
+			
+--------------------------------------------------------------------------------
+								VALIDATION - Body 
+	
+	JSON - Java Script Object Notation 
+			Communication btw client & Server in json/xml format
+								
+	json file extension - .json 
+	media type - application/Json 
+	
+	Json data types
+		Number 
+		String
+		Null -unknown value
+		Boolean
+		array
+		object -multiple records
+		
+	--> Represented in form of Key and Value pais inside json 
+		
+		Key : Value of String
+		{
+		"name" : "value"
+		}
+		
+		Key : Value of number
+		{
+		"age" : 25,
+		"phone": [634798798034, 6778678943],
+		"status" : true
+		}
+		
+	Multiple data -
+		{
+		"students": [
+		{
+		"sname" : "sureka",
+		"age" : 19,
+		"grade":"A"
+		},
+		{
+		"sname" : "arun",
+		"age" : 19,
+		"grade":"B"
+		},
+		{
+		"sname" : "arjun",
+		"age" : 20,
+		"grade":"c"
+		}
+		]
+		}
+		
+			1. How to write json path of simple json format
+			students[0].sname   -----> john
+			students[2].age -----> 20
+		
+			2. How to write json path of Complex json format 
+				jsonpathfinder - tool to find the path
+				jsonpath.com - exactly validate the jsonpath is correct or not
+				
+		
+		---------------------------------------------------------------------------------------
+		Json 								VS 						xml
+		---------------------------------------------------------------------------------------
+		Simple to read/write				|	less simple as cmprd to json
+		supports  array						|	doesnot supports array
+		supports text and number datatypes	| 	supports text,numb, image, chart,graphgs ect
+		---------------------------------------------------------------------------------------
+		
+		
+		Json object - which contain multiple key value pais (eg: look above the "multiple data") i.e, array of objects	
+		Json array - eg : "phone": [634798798034, 6778678943] contains primitive values
+		
+	
+	-------------------------------------------------------------------------------------------------
+	--------------------DAY 4 ----------------- Validation / Asserstions ----------------------------
+	-------------------------------------------------------------------------------------------------	
+	
+	Response validations:
+	
+							Status codeHeaders
+							Cookies
+							Response time
+							Response body
+	These above validation is validated by asserstions - pm 
+	
+	pm - is a postman library has functions written in javascript 
+	
+	We need to write javascript function call the postman library 
+		
+	2 ways we can write,
+		Normal function
+		Arrow function 
+							
+							
+	Chai Asserstion library : framewwork in postman 
+	
+	Normal function 
+	
+		pm.test("Test Name", function()
+		{
+		//asserstion;
+		}
+		);
+	
+	Arrow function
+	
+		pm.test("Test Name", () =>
+		{
+		//asserstion;
+		}
+		);

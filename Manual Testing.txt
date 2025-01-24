@@ -14,6 +14,102 @@ Regression Testing -
 
 To overcome Retesting / Regression testing - Automation came 
 
+Severity and Priority 
+
+Impact of the defect represents Severity
+Urgency or how quickly to fix a defect represents priority
+
+eg : system crash in rare condition - severity high and priority low
+eg : logo on the home page is incorrect - Severity low and priority is high(user trust issue)
+eg:  Minor spelling mistake in Help section - both are low
+
+
+---------------------------------------------- STLC and SDLC -----------------------------------	
+
+STLC - 	Focus on Testing/Quality of software
+		
+		Requirement Analysis
+		Test Plan
+		Test Case
+		Environment Setup
+		Test Execution 
+		Test closure
+		
+		
+SDLC - focus on Development/Deployment(testing)
+
+		Requirement Analysis 
+		Plan
+		Design 
+		Development
+		Testing
+		Deployment
+		Maintance
+	
+---------------------------------------------- Types of Testing ---------------------------------------------------
+
+Functional Testing  -Focuses on verifying that the software functions as intended and meets the specified requirements
+	1. Unit Testing
+	2. Integrated testing 
+	3. System Testing
+	4. User Acceptance testing
+	
+Manual Testing   -
+	1. Exploratory testing 
+	2. Adhoc Testing 
+	
+Automated Testing - 
+	1. Regression Testing	-		New changes don’t break existing features
+	2. Smoke Testing		-		basic functionality
+	3. Sanity Testing		-		specific functionality after minor changes
+
+White-Box Testing		-		Tests internal structures or workings of an application DEV
+Black-Box Testing		-		Focuses on testing the application without knowing its internal workings
+Grey-Box Testing		-		A hybrid approach combining aspects of both white-box and black-box testing
+
+Specialized Testing
+	1. API Testing
+	2. Database Testing
+	3. Mobile Testing
+	4. Game Testing
+	5. AI/ML Testing
+	
+--------------------------------------------- Testing methodologies ------------------------------------------------------------------------------
+
+																			
+Agile is a project management and software development philosophy that emphasizes flexibility, iterative progress, and customer collaboration.
+	
+	Key Principles of Agile (from the Agile Manifesto):
+		1. Customer Collaboration: Engage customers throughout the development process for feedback.
+		2. Responding to Change: Adapt quickly to changing requirements.
+		3. Individuals and Interactions: Prioritize people and teamwork over processes and tools.
+		4. Working Software: Deliver functional software frequently (short iterations).
 	
 	
+Scrum is a specific Agile framework that focuses on delivering value incrementally through sprints. It defines roles, events, and artifacts to structure and organize work.
 	
+	Roles:	Product Owner 
+			Scrum Master
+			Development Team
+			
+	Artifacts : Product Backlog
+				Sprint Backlog
+				Increment
+				
+	Events:   Sprint planning
+			  Daily scrum
+			  Sprint review
+			  Sprint retrospective
+			  
+	Sprints: 2-4 weeks - time boxed iterations
+	
+----------------------------------------------------- Bug Cycle -------------------------------------------------------------------------------
+
+New → Assigned → Open → Fixed → Retest → Verified → Closed
+      ↑                               ↓
+    Rejected                         Reopened
+      ↓                               ↑
+   Deferred                        Duplicate\
+   
+-------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,7 @@
+Maven Dependencies used in Selenium 
+
+Selenium java		- 	 
+
+TestNG		 		- 		Unit testing framework (supports asserstions to expectations)
+
+x

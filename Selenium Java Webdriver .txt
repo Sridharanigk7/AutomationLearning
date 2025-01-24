@@ -1,0 +1,25 @@
+						Selenium Java Webdriver 
+						
+						
+>> Web base applications can be automated
+
+>> supports Chrome, Firefox, Internet Explorer, Safari 
+
+>> all platform supported i.e, apple OS, windows, linux
+
+>> Selenium - suit of tools to automate
+			 2 tools < Webdriver and IDE(Record and playback)
+			 
+
+
+					************* Selenium Webdriver Architecture *************
+						
+						
+				Json format							Communicate
+	Test case ---------------- Browser drivers ---------------------> RespectiveBrowse -----
+							^																|
+							|																|
+				Json format	|																|
+							 ---Browser drivers <--------------------- Actions complete <----
+					
+

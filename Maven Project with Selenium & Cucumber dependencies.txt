@@ -101,12 +101,17 @@ Implicit wait and Explicit wait ? or syncronization ? are same
 
 page load timeout - particular page to load 
 driver.manage().timeout().pageLoadTimeout(20,Timeunits.SECONDS);
-
-Implicit wait - global webElement can use this wait 
+-----------------------------------------------------------------
+Implicit wait - global webElement can use this wait unit driver.quit() happens
 driver.manage().timeout().implicitlywait(20,Timeunits.SECONDS);
- 
- 
+This wait will wait for visibility of webelemnt only but not check for Interactable eg: wait untill element is clickable or not
+--------------------------------------------------------------------------- 
 Explicit wait - Webdriver wait has no methods straight 
+
+WebDriver wait = new WebDriver(driver, 20)
+wait.until(ExpectedConditions.visibilityOf(element));
+element.click();
+-----------------------VC
 
 Create a method to send values or to click till the element visibility,
 
