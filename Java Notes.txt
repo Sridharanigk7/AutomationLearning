@@ -17,6 +17,15 @@ public static void main(String[] args)
 
 }
 
+what is public static void main (String[] args)
+
+		Public - Access modifier which we can access class from anywhere
+		static	-	Helps to run main method without objects
+		void -  keyword donot want to return any value
+		main() - ENtry point of java programs, jvm (java virtual machine always looks for main() to start program)
+		Str[] args - Array of string object passed through programs
+		
+		
 ----------------------------------------------------------------------------------------
 
 To create a method 
@@ -214,3 +223,35 @@ for(int i =0; i<arr.length; i++)
 {
 system.out.println(arr[i]);
 }
+
+---------------------------------------------------------------------------------------------------
+Write a Java program to reverse a string 
+
+public class Reversestring{
+	public static void main (string[] args){
+		String input ="Helpme";
+		String reverse ="";
+		
+		for (i=input.length()-1 , i>=0 ,i--){
+		reverse +=input.charAt(i);
+		}
+		System.out.println("Reversed string is " + reverse)
+
+	}
+
+}
+-----------------------------------------------------------------------------------------------------
+Write a Java program to check the given string is palindrome or not
+
+public class palindrome(){
+	public static void main(String[] args) {
+ String input ="Selectme";
+ String reverse = new StringBuilder(input).reverse().tostring();
+ if (input ==revese) {
+ system.out.p;rintln(User input is a palindrome);
+  }
+  else {
+  system.out.p;rintln(User input is not a palindrome);
+  }
+  }
+  }

@@ -1,0 +1,66 @@
+SQL 
+
+Select last row  From a table?
+
+SELECT * FROM Student
+ORDER BY studentid DESC
+Limit 1;
+ 
+ 
+Select first rowm from a table?
+
+SELECT * FROM Student
+ORDER BY studentid
+Limit 1;
+
+
+Delete 2nd row from a table?
+
+DELETE FROM table
+WHERE studentid= 2;
+
+select a row having gender male and name with letter having greater than 5 alphabets?
+
+SELECT FROM table
+WHERE gender ="Male"
+AND LENGTH(Name) > 4;
+
+Count no of records in table?
+
+SELECT COUNT(*) FROM table;
+
+select average grade in english in cuddels playgroup sec A ?
+
+
+
+select a name ends with KUMAR?
+
+
+
+
+
+-----------------------------------------
+Some of The Most Important SQL Commands
+SELECT - extracts data from a database
+UPDATE - updates data in a database
+DELETE - deletes data from a database
+INSERT INTO - inserts new data into a database
+CREATE DATABASE - creates a new database
+ALTER DATABASE - modifies a database
+CREATE TABLE - creates a new table
+ALTER TABLE - modifies a table
+DROP TABLE - deletes a table
+CREATE INDEX - creates an index (search key)
+DROP INDEX - deletes an index
+-----------------------------------------
+
+
+
+ORDER BY ----> Defaults to ASC
+ORDER BY columnname  and ORDER BY columnname  ASC	 ===> ASC
+ORDER BY columnname DESC 							 ====> DESC
+
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
