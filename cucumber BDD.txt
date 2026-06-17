@@ -12,6 +12,13 @@ Feature file - .feature extension
 Scenario outline 
 Step Definition
 
+Given - Precondition
+When - Action
+Then - Expected Results
+
+Feature - Businees requirements 
+Feature file - Test suite 
+
 Scenario : Make Minimum due payment
 	Given user is on pay credit card page	(pre-conditions)
 	When user fill details and select minimum amount	(user actions)
@@ -32,10 +39,10 @@ Step 2 : Eclipse download
 
 Eclipse IDE for java developers
 
-Step 3 : Instal cucumber plugin from Eclipse market place >> help
-			testng pluiginwaz
+Step 3 : Instal cucumber + TestNG plugin from Eclipse market place >> help
+			testng pluigin 
 			
-step 4 : Create a java project using maven structure 
+step 4 : Create a java project using maven structure (Hirarchy structure build by itself)
 
  ------------------------------------------------------------------------------------
  
@@ -197,3 +204,7 @@ extend - 3 rd party plugin so need maven dependenciew for this
 
 in mvn repo : extent report dependency (1)
 			  grasshopper>>extentreports cucumber7 adaptor
+
+------------------------------------------------------Exceptions----------------------------------------------
+
+UndefinedStepException
