@@ -103,7 +103,7 @@ Status code
 
 3 levels 
 200 --->successfull
-400 --->Unauthorised
+400 --->Unauthorised - client side error
 500 --->Server error 
 
 URL reference : https://restfulapi.net/http-status-codes/ 3 level code status flowchart
